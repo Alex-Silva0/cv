@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo - Alex Silva</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+  <style>
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+      box-sizing: border-box;
+    }
+    
+    a {
+      text-decoration: none;
+      color: unset;
+    }
+
+    .email:hover {
+      text-decoration: underline;
+    }
+
+    :root {
+      --main-color: #002E58;
+      --main-text-color: #7a7a7a;
+      --icon-circle-size: 36px;
+      --dot-size: 10px;
+      --graduation-padding: 20px;
+    }
+
+    body {
+      font-family: "Hanken Grotesk", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      width: 100vw;
+      /* max-width: 1240px; */
+      display: flex;
+      color: var(--main-text-color);
+    }
+
+    .lateral-bar {
+      background-color: var(--main-color);
+      width: 200px;
+      height: inherit;
+    }
+
+    main {
+      flex-grow: 1;
+      margin: 25px 24px 25px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      position: relative;
+    }
+
+    .name {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--main-color);
+    }
+
+    .role {
+      font-size: 24px;
+      font-weight: 700;
+      font-style: italic;
+      color: var(--main-color);
+    }
+
+    .info-line {
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+    
+    .icon-circle {
+      width: var(--icon-circle-size);
+      height: var(--icon-circle-size);
+      padding: 4px;
+      border-radius: 50%;
+      background-color: var(--main-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    .icon-circle > i {
+      color: #fff;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .basic-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .section-title {
+      color: var(--main-color);
+      font-size: 1.5em;
+      font-weight: 700;
+    }
+
+    .start-vertical-line {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    #vertical-connect-line {
+      position: absolute;
+      height: 100vh;
+      width: 2px;
+      background-color: #F0F0F0;
+      z-index: -1;
+    }
+
+    .dot {
+      position: absolute;
+      transform: translateX(calc(-50% - var(--graduation-padding)));
+      width: var(--dot-size);
+      height: var(--dot-size);
+      border-radius: 50%;
+      background-color: var(--main-color);
+    }
+
+    .line-align {
+      position: relative;
+      left: calc(var(--icon-circle-size) / 2);
+    }
+
+    .dot-align {
+      position: relative;
+      left: calc(var(--dot-size) / 2);
+    }
+
+    .bold {
+      font-weight: 700;
+    }
+
+    .info-block {
+      display: flex;
+      align-items: start;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    .tab {
+      margin-left: var(--graduation-padding);
+    }
+
+    .v-space {
+      height: 16px;
+    }
+
+    .v-space-small {
+      height: 8px;
+    }
+    
+    .underline {
+      text-decoration: underline;
+    }
+    
+    .external-link-icon {
+      font-size: 0.7em;
+    }
+
+    .description {
+      margin: 8px 0;
+    }
+
+    @media all and (max-width: 480px) {
+      .lateral-bar {
+        width: calc(0.1 * 100vw);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="lateral-bar"></div>
+  <main>
+    <div class="title">
+      <p class="name">Alex Fernandes da Silva</p>
+      <p class="role">Full stack web developer</p>
+    </div>
+    <div class="basic-info">
+      <div class="info-line">
+        <div class="icon-circle">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <div>
+          <p>Paraíba - Brasil</p>
+        </div>
+      </div>
+      <div class="contact">
+        <div class="info-line">
+          <div class="icon-circle">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <a class="email" href="mailto:alexfernandes12346@gmail.com" class="add-underline">
+            <div>
+              <p>alexfernandes12346@gmail.com</p>
+            </div>
+          </a>
+        </div>
+        <div class="info-line">
+          <div class="icon-circle">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div>
+            <p>+55 (83) 99909-4349</p>
+          </div>
+        </div>
+      </div>
+      <div class="info-line">
+        <div class="icon-circle">
+          <i class="fa-brands fa-github"></i>
+        </div>
+        <div>
+          <a class="underline" href="https://github.com/Alex-Silva0" target="_blank">Github</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="description">
+      <p>Profissional com cerca de 4 anos de experiência em programação, especializado em desenvolvimento web.</p>
+      <p>Experiência em projetos de grande escala como freelancer, além de um portfólio de projetos próprios.</p>
+      <p>Comprometido em aprender novos conceitos e aprimorar constantemente as habilidades.</p>
+    </div>
+    
+    <div class="info-line">
+      <div class="icon-circle">
+        <i class="fa-solid fa-puzzle-piece"></i>
+      </div>
+
+      <div class="section-title">
+        <p>Portfólio</p>
+      </div>
+    </div>
+
+    <div class="info-line line-align tab">
+      <div class="dot"></div>
+      <div>
+        <a class="underline" href="https://github.com/Alex-Silva0/quadradado" target="_blank">Quadradado <i class="fa-solid external-link-icon fa-external-link"></i></a>
+      </div>
+    </div>
+
+    <div class="info-line line-align tab">
+      <div class="dot"></div>
+      <div>
+        <a class="underline" href="https://github.com/Alex-Silva0/learntrack" target="_blank">LearnTrack <i class="fa-solid external-link-icon fa-external-link"></i></a>
+      </div>
+    </div>
+    
+    <div class="v-space"></div>
+
+    <div class="info-line">
+      <div class="start-vertical-line">
+        <div class="icon-circle">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div id="vertical-connect-line"></div>
+      </div>
+
+      <div class="section-title">
+        <p>Formação</p>
+      </div>
+    </div>
+    <div class="info-line line-align tab">
+      <div class="dot"></div>
+      <div>
+        <p class="bold">Cursando Ciência da Computação</p>
+      </div>
+    </div>
+    <div class="line-align tab">
+      <p class="italic">Universidade Federal de Campina Grande - UFCG</p>
+    </div>
+    <div class="line-align tab">
+      <div class="tab">
+        <div><span class="bold">Início em:</span>&nbsp;<span>2023</span></div>
+        <div><span class="bold">Período atual:</span>&nbsp;<span>4</span></div>
+      </div>
+    </div>
+
+    <div class="v-space"></div>
+
+    <div class="info-line">
+      <div class="icon-circle">
+        <i class="fa-solid fa-puzzle-piece"></i>
+      </div>
+
+      <div class="section-title">
+        <p>Skills (em ordem de experiência)</p>
+      </div>
+    </div>
+
+    <div class="info-line line-align tab">
+      <div class="dot"></div>
+      <div>
+        <p class="bold">Web Frontend:</p>
+      </div>
+    </div>
+    
+    <div class="info-line line-align tab">
+      <div class="tab">
+        <p>HTML / CSS</p>
+      </div>
+    </div>
+
+    <div class="info-line line-align tab">
+      <div class="tab">
+        <p>Javascript / Typescript</p>
+      </div>
+    </div>
+
+    <div class="info-line line-align tab">
+      <div class="tab">
+        <p>React</p>
+      </div>
+    </div>
+
+    <div class="info-line line-align tab">
+      <div class="tab">
+        <p>Tailwind</p>
+      </div>
+    </div>
+    
+    <div class="info-line line-align tab">
+      <div class="dot"></div>
+      <div>
+        <p class="bold">Web Backend:</p>
+      </div>
+    </div>
+
+    <div class="info-line line-align tab">
+      <div class="tab">
+        <p>Node</p>
+      </div>
+    </div>
+    
+    <div class="info-line line-align tab">
+      <div class="tab">
+        <p>Express</p>
+      </div>
+    </div>
+    
+    <div class="info-line line-align tab">
+      <div class="tab">
+        <p>Php</p>
+      </div>
+    </div>
+
+    <div class="info-line line-align tab">
+      <div class="tab">
+        <p>Databases SQL e NoSQL como postgres e MongoDB</p>
+      </div>
+    </div>
+
+    <div class="info-line line-align tab">
+      <div class="dot"></div>
+      <div>
+        <p class="bold">Outros:</p>
+      </div>
+    </div>
+    
+    <div class="info-line line-align tab">
+      <div class="tab">
+        <p>Python</p>
+      </div>
+    </div>
+
+    <div class="info-line line-align tab">
+      <div class="tab">
+        <p>Java</p>
+      </div>
+    </div>
+
+    <div class="info-line line-align tab">
+      <div class="tab">
+        <p>Dart/flutter</p>
+      </div>
+    </div>
+
+    <div class="v-space"></div>
+
+    <div class="info-line" id="vertical-line-end">
+      <div class="icon-circle">
+        <i class="fa-solid fa-globe"></i>
+      </div>
+
+      <div class="section-title">
+        <p>Idiomas</p>
+      </div>
+    </div>
+    <div class="line-align tab">
+      <p class="italic">Inglês</p>
+    </div>
+    
+    <div class="v-space"></div>
+
+    <div class="info-line line-align">
+      <div>
+        <a class="underline" href="https://alex-silva0.github.io/cv" target="_blank">Versão web <i class="fa-solid external-link-icon fa-external-link"></i></a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    let verticalLineStart = document.getElementById("vertical-connect-line")
+    let verticalLineEnd = document.getElementById("vertical-line-end")
+    verticalLineStart.style.height = verticalLineEnd.getBoundingClientRect().y - verticalLineStart.getBoundingClientRect().y + "px"
+  </script>
+  <script src="https://kit.fontawesome.com/343c0111ff.js" crossorigin="anonymous"></script>
+</body>
+</html>
